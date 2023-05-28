@@ -91,6 +91,7 @@ function App() {
   };
   return (
     <div>
+      <label>选择文件，注意文件格式为UTF-8</label>
       <input type="file" onChange={handleFileChange} />
       <textarea
         style={{
