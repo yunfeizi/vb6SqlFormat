@@ -90,9 +90,14 @@ function App() {
     }
   };
   return (
-    <div>
-      <label>选择文件，注意文件格式为UTF-8</label>
-      <input type="file" onChange={handleFileChange} />
+    <div className="container">
+      <div className="left">
+        <label>
+          【支持.frm,.bas,.txt等格式，但是一定要是UTF-8格式，不然乱码】
+        </label>
+        <input type="file" onChange={handleFileChange} />
+      </div>
+      <div className="right">
       <textarea
         style={{
           maxHeight: "90vh",
@@ -104,6 +109,7 @@ function App() {
         value={fileContent}
         onChange={(e) => setFileContent(e.target.value)}
       />
+      </div>
     </div>
   );
 }
